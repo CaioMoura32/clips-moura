@@ -69,52 +69,63 @@
     </div>
     <ul class="" uk-accordion>
         <li>
-                <a class="uk-accordion-title publicar-video" href>Publicar Video <span uk-icon="icon: upload"></span></a>
-                <div class="uk-accordion-content">
-                    <div class="uk-container uk-container-primary">
-                <div class="uk-grid uk-child-width-1-2@s uk-child-width-1-2@m uk-grid-divider" uk-grid>
-                    <div class="uk-width-auto@m formulario-preview">
-                        <h2>Preencha o campo com forme o seu video vai ser postado</h2>
-                        <div class="caixa-de-como-pegar-link-iframe">
-                            <p>
-                                como pegar o <b>link</b> do video 
-                                <span uk-lightbox><a data-type="iframe" href="https://drive.google.com/file/d/1P60lzVb3bV7r-suI1GTiyS6VKrW1Fx9o/preview"><span uk-icon="icon: phone"></span></a></span>
-                                <samp class="primeiro-icone"></samp>
-                                <span uk-lightbox><a data-type="iframe" href="https://drive.google.com/file/d/1YXPsE6wsr1kJpnovXOaUVFeYT8h7cgsG/preview"><span uk-icon="icon: laptop"></span></a></span>
-                            </p>
-                        </div>
-                        <form action="PayslipServlet" method="get">
-                            <p>Nome:</p>
-                            <input class="uk-input" type="text" name="nome" id="nome"><br />
-                            <p>Link iframe:</p>
-                            <input class="uk-input" type="text" name="linkIframe" id="linkIframe"><br />
-                            <p>Titulo: </p>
-                            <input class="uk-input" type="text" name="tituloVideo" id="tituloVideo"><br />
-                            <p>Descrição: </p>
-                            <input class="uk-input" type="text" name="descricaoVideo" id="descricaoVideo"><br />
-                            <a href="#modal-example" uk-toggle class="text-iframe">Se meu video não carregar no preview</a>
-                            <div id="modal-example" uk-modal>
-                                <div class="uk-modal-dialog uk-modal-body">
-                                    <p>
-                                        <b>Troque o final o final da url do link compartilhado do seu drive por:</b><br><br>
-                                        De: https://drive.google.com/file/d/1QnmnNBA9y2dd05m6fmRJrFXfGd1yGGgY/<span class="sinalizacao-de-troca">view?usp=drivesdk</span><br>
-                                        Para: https://drive.google.com/file/d/1QnmnNBA9y2dd05m6fmRJrFXfGd1yGGgY/<span class="sinalizacao-de-troca">preview</span>
-        
-                                    </p>
-                                </div>
+            <a class="uk-accordion-title publicar-video" href>Publicar Video <span uk-icon="icon: upload"></span></a>
+            <div class="uk-accordion-content">
+                <div class="uk-container uk-container-primary">
+                    <div class="uk-grid uk-child-width-1-2@s uk-child-width-1-2@m uk-grid-divider" uk-grid>
+                        <div class="uk-width-auto@m formulario-preview">
+                            <h2>Preencha o campo com forme o seu video vai ser postado</h2>
+                            <div class="caixa-de-como-pegar-link-iframe">
+                                <p>
+                                    como pegar o <b>link</b> do video
+                                    <span uk-lightbox><a data-type="iframe"
+                                            href="https://drive.google.com/file/d/1P60lzVb3bV7r-suI1GTiyS6VKrW1Fx9o/preview"><span
+                                                uk-icon="icon: phone"></span></a></span>
+                                    <samp class="primeiro-icone"></samp>
+                                    <span uk-lightbox><a data-type="iframe"
+                                            href="https://drive.google.com/file/d/1YXPsE6wsr1kJpnovXOaUVFeYT8h7cgsG/preview"><span
+                                                uk-icon="icon: laptop"></span></a></span>
+                                </p>
                             </div>
-                            <p style="margin-top: 7px;">Nome do arquivo do video salvo no seu pc:</p>
-                            <input class="uk-input" type="text" name="descricaoVideoDownload" id="descricaoVideoDownload"><br />
-                            <input class="uk-button uk-button-primary" type="button" value="Gerar Video" onClick="pr()">
-                        </form>
+                            <form action="PayslipServlet" method="get">
+                                <p>Nome:</p>
+                                <input class="uk-input" type="text" name="nome" id="nome"><br />
+                                <p>Link iframe:</p>
+                                <input class="uk-input" type="text" name="linkIframe" id="linkIframe"><br />
+                                <p>Titulo: </p>
+                                <input class="uk-input" type="text" name="tituloVideo" id="tituloVideo"><br />
+                                <p>Descrição: </p>
+                                <input class="uk-input" type="text" name="descricaoVideo" id="descricaoVideo"><br />
+                                <a href="#modal-example" uk-toggle class="text-iframe">Se meu video não carregar no
+                                    preview</a>
+                                <div id="modal-example" uk-modal>
+                                    <div class="uk-modal-dialog uk-modal-body">
+                                        <p>
+                                            <b>Troque o final o final da url do link compartilhado do seu drive
+                                                por:</b><br><br>
+                                            De: https://drive.google.com/file/d/1QnmnNBA9y2dd05m6fmRJrFXfGd1yGGgY/<span
+                                                class="sinalizacao-de-troca">view?usp=drivesdk</span><br>
+                                            Para:
+                                            https://drive.google.com/file/d/1QnmnNBA9y2dd05m6fmRJrFXfGd1yGGgY/<span
+                                                class="sinalizacao-de-troca">preview</span>
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 7px;">Nome do arquivo do video salvo no seu pc:</p>
+                                <input class="uk-input" type="text" name="descricaoVideoDownload"
+                                    id="descricaoVideoDownload"><br />
+                                <input class="uk-button uk-button-primary" type="button" value="Gerar Video"
+                                    onClick="pr()">
+                            </form>
+                        </div>
+                        <div id="result" class="campo-preview uk-flex uk-width-expand@m"></div>
                     </div>
-                    <div id="result" class="campo-preview uk-flex uk-width-expand@m"></div>
                 </div>
             </div>
-                </div>
-            </li>
-        </ul>
-    
+        </li>
+    </ul>
+
     <div class="uk-section uk-section-default">
         <div class="uk-container uk-container-default">
             <div class="filter" uk-filter="target: .js-filter">
@@ -184,6 +195,28 @@
                                     <div class="uk-flex campo-botoes-compartilhar-baixar">
                                         <a uk-tooltip="Download" href="/videos/Chihiro Triplo.mp4" download=""><span
                                                 uk-icon="icon: download"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="Pedro">
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <iframe
+                                        src="https://drive.google.com/file/d/1i0bqKDWRvfooZt0tgnvD2XXOtkJqki-S/preview"
+                                        width="100%" height="339px" allow="fullscreen"></iframe>
+                                </div>
+                                <div class="uk-card-body">
+                                    <p class="name">Pedro</p>
+                                    <h3 uk-slider-parallax="x: 100,-100" class="uk-card-title">Triplo Kill Spray</h3>
+                                    <p uk-slider-parallax="x: 200,-200">Após cegar todo mundo matou 3 rapidamente</p>
+                                    <div class="felx-botoes-filter" uk-slider-parallax="y: 50,0,0; opacity: 1,1,0">
+                                        <div class="uk-flex campo-botoes-compartilhar-baixar">
+                                            <a uk-tooltip="Download" href="/videos/Tiro Cagado.mp4" download=""><span
+                                                    uk-icon="icon: download"></span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
