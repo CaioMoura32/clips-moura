@@ -67,64 +67,6 @@
 
         </div>
     </div>
-    <ul class="" uk-accordion>
-        <li>
-            <a class="uk-accordion-title publicar-video" href>Publicar Video <span uk-icon="icon: upload"></span></a>
-            <div class="uk-accordion-content">
-                <div class="uk-container uk-container-primary">
-                    <div class="uk-grid uk-child-width-1-2@s uk-child-width-1-2@m uk-grid-divider" uk-grid>
-                        <div class="uk-width-auto@m formulario-preview">
-                            <h2>Preencha o campo com forme o seu video vai ser postado</h2>
-                            <div class="caixa-de-como-pegar-link-iframe">
-                                <p>
-                                    como pegar o <b>link</b> do video
-                                    <span uk-lightbox><a data-type="iframe"
-                                            href="https://drive.google.com/file/d/1P60lzVb3bV7r-suI1GTiyS6VKrW1Fx9o/preview"><span
-                                                uk-icon="icon: phone"></span></a></span>
-                                    <samp class="primeiro-icone"></samp>
-                                    <span uk-lightbox><a data-type="iframe"
-                                            href="https://drive.google.com/file/d/1YXPsE6wsr1kJpnovXOaUVFeYT8h7cgsG/preview"><span
-                                                uk-icon="icon: laptop"></span></a></span>
-                                </p>
-                            </div>
-                            <form action="PayslipServlet" method="get">
-                                <p>Nome:</p>
-                                <input class="uk-input" type="text" name="nome" id="nome"><br />
-                                <p>Link iframe:</p>
-                                <input class="uk-input" type="text" name="linkIframe" id="linkIframe"><br />
-                                <a href="#modal-example" uk-toggle class="text-iframe">Se meu video não carregar no
-                                    preview</a>
-                                <p style="margin-top: 7px;">Titulo: </p>
-                                <input class="uk-input" type="text" name="tituloVideo" id="tituloVideo"><br />
-                                <p>Descrição: </p>
-                                <input class="uk-input" type="text" name="descricaoVideo" id="descricaoVideo"><br />
-                                <div id="modal-example" uk-modal>
-                                    <div class="uk-modal-dialog uk-modal-body">
-                                        <p>
-                                            <b>Troque o final o final da url do link compartilhado do seu drive
-                                                por:</b><br><br>
-                                            De: https://drive.google.com/file/d/1QnmnNBA9y2dd05m6fmRJrFXfGd1yGGgY/<span
-                                                class="sinalizacao-de-troca">view?usp=drivesdk</span><br>
-                                            Para:
-                                            https://drive.google.com/file/d/1QnmnNBA9y2dd05m6fmRJrFXfGd1yGGgY/<span
-                                                class="sinalizacao-de-troca">preview</span>
-
-                                        </p>
-                                    </div>
-                                </div>
-                                <p>Nome do arquivo do video salvo no seu pc:</p>
-                                <input class="uk-input" type="text" name="descricaoVideoDownload"
-                                    id="descricaoVideoDownload"><br />
-                                <input class="uk-button uk-button-primary" type="button" value="Gerar Video"
-                                    onClick="pr()">
-                            </form>
-                        </div>
-                        <div id="result" class="campo-preview uk-flex uk-width-expand@m"></div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
 
     <div class="uk-section uk-section-default">
         <div class="uk-container uk-container-default">
@@ -158,8 +100,8 @@
                                         jogar assim!</p>
                                     <div class="felx-botoes-filter" uk-slider-parallax="y: 50,0,0; opacity: 1,1,0">
                                         <div class="uk-flex campo-botoes-compartilhar-baixar">
-                                            <a uk-tooltip="Download" href="/videos/conectei-o-pen-drive.mp4"
-                                                download=""><span uk-icon="icon: download"></span></a>
+                                            <a href="https://drive.google.com/file/d/1ovUdltUOWZMfWREiZ_nL8Vslf_Kbu0JK/preview"
+                                                download="NOME_DO_ARQUIVO"><span uk-icon="icon: download"></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -323,6 +265,65 @@
 
             </div>
         </div>
+        </div>
+        <ul class="section-publicar-video" uk-accordion>
+            <li>
+                <a class="uk-accordion-title publicar-video" href>Publicar Video <span uk-icon="icon: upload"></span></a>
+                <div class="uk-accordion-content">
+                    <div class="uk-container uk-container-primary">
+                        <div class="uk-grid uk-child-width-1-2@s uk-child-width-1-2@m uk-grid-divider" uk-grid>
+                            <div class="uk-width-auto@m formulario-preview">
+                                <h2>Preencha o campo com forme o seu video vai ser postado</h2>
+                                <div class="caixa-de-como-pegar-link-iframe">
+                                    <p>
+                                        como pegar o <b>link</b> do video
+                                        <span uk-lightbox><a data-type="iframe"
+                                                href="https://drive.google.com/file/d/1P60lzVb3bV7r-suI1GTiyS6VKrW1Fx9o/preview"><span
+                                                    uk-icon="icon: phone"></span></a></span>
+                                        <samp class="primeiro-icone"></samp>
+                                        <span uk-lightbox><a data-type="iframe"
+                                                href="https://drive.google.com/file/d/1YXPsE6wsr1kJpnovXOaUVFeYT8h7cgsG/preview"><span
+                                                    uk-icon="icon: laptop"></span></a></span>
+                                    </p>
+                                </div>
+                                <form action="PayslipServlet" method="get">
+                                    <p>Nome:</p>
+                                    <input class="uk-input" placeholder="Nome:" type="text" name="nome" id="nome"><br />
+                                    <p>Link do video no drive:</p>
+                                    <input class="uk-input" placeholder="Link do video no drive:"  type="text" name="linkIframe" id="linkIframe"><br />
+                                    <a href="#modal-example" uk-toggle class="text-iframe">Se meu video não carregar no
+                                        preview</a>
+                                    <p style="margin-top: 7px;">Titulo: </p>
+                                    <input class="uk-input" placeholder="Titulo:" type="text" name="tituloVideo" id="tituloVideo"><br />
+                                    <p >Descrição: </p>
+                                    <input  class="uk-input" placeholder="Descrição:" type="text" name="descricaoVideo" id="descricaoVideo"><br />
+                                    <div id="modal-example" uk-modal>
+                                        <div class="uk-modal-dialog uk-modal-body">
+                                            <p>
+                                                <b>Troque o final o final da url do link compartilhado do seu drive
+                                                    por:</b><br><br>
+                                                De: https://drive.google.com/file/d/1QnmnNBA9y2dd05m6fmRJrFXfGd1yGGgY/<span
+                                                    class="sinalizacao-de-troca">view?usp=drivesdk</span><br>
+                                                Para:
+                                                https://drive.google.com/file/d/1QnmnNBA9y2dd05m6fmRJrFXfGd1yGGgY/<span
+                                                    class="sinalizacao-de-troca">preview</span>
+    
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p style="display: none;">Nome do arquivo do video salvo no seu pc:</p>
+                                    <input style="display: none !important;" placeholder="Nome do arquivo do video salvo no seu pc:" class="uk-input" type="text" name="descricaoVideoDownload"
+                                        id="descricaoVideoDownload"><br />
+                                    <input class="uk-button uk-button-primary" type="button" value="Gerar Video"
+                                        onClick="pr()">
+                                </form>
+                            </div>
+                            <div id="result" class="campo-preview uk-flex uk-width-expand@m"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="../js/script.js"></script>

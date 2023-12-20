@@ -1,0 +1,11 @@
+{
+    "name" : "google_drive_api",
+    "version": "1.0.0",
+    "description": "Api Google Drive",
+    "main": "repository.js",
+        "scripts": {
+            "test": "echo \"Error : no test especified\" && exit 1"
+        },
+        "author": "Truly Mittal <clipsmoura@gmail.com>",
+        "license": "ISC"
+}
